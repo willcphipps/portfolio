@@ -2,7 +2,7 @@
 @import 'menu';
 
 
-
+// index
 html {
     font-size: 10px;
 }
@@ -20,8 +20,9 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
 }
-// Headings
 
+
+// Headings
 h1,
 h2,
 h3 {
@@ -34,7 +35,7 @@ h3 {
   &.sm-heading{
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(darken($primary-color, 10), .2);
   }
 
 }
@@ -74,6 +75,8 @@ main {
   }
 }
 
+
+// about page
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -81,12 +84,12 @@ main {
   'bioimage bio bio'
   'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr);
-
 }
+
 .bio-image {
   grid-area: bioimage;
   margin: auto;
-  // border-radius: 50%;
+  border-radius: 50%;
   border: $secondary-color 3px solid;
 }
 
@@ -103,17 +106,17 @@ main {
 .job-3 {
   grid-area: job3;
 }
-
 .job {
   background: lighten($primary-color, 5);
   padding: 0.5rem;
   border-bottom: $secondary-color 5px solid;
 }
 
-// projects
+// work page
 .projects {
+  margin-top: 5rem;
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
 
   img{
@@ -123,9 +126,41 @@ main {
     &:hover {
       opacity: 0.5;
       border-color: $secondary-color;
+      @include easeOut;
     }
   }
 }
+
+// contact page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10vh; 
+  
+  .container {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.0rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 1.7rem 2.2rem;
+      background: $secondary-color;
+      
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+  .cont-social:hover{
+    color: rgb(97, 97, 160);
+    @include easeOut;
+  }
+}
+
 
 // button styles
 .btn {
