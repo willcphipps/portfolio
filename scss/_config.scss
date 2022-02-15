@@ -1,5 +1,5 @@
-$primary-color: #444;
-$secondary-color: #e0b559;
+$primary-color: #ffffff;
+$secondary-color: #5f7c52;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.8;
@@ -34,7 +34,6 @@ $background-opacity: 0.8;
   }@else{
     @return #fff;
   }
-
 }
 
 // media quwery mixins

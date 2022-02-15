@@ -44,19 +44,46 @@
         </nav>
     </header>
     <main id="contact">
-        <h1 class="lg-heading"> Contact <span class="text-secondary">Me</span>
-        </h1>
+        <h1 class="lg-heading"> Get in touch </h1>
+        <div class="contact-subtext">
+            <h2>If you want to get in touch, collaborate on a project, or simply say hello, don't hesitate to 
+                fill out the contact form below. You can also send me an email at willcphipps@gmail.com!
+            </h2>
+        </div>
         <div class="boxes">
-           <div class="container">
-               <span class="text-secondary"> Email: </span>
-               willcphipps@gmail.com
+           <div class="email-form">
+               <form action="https://formspree.io/f/mbjwgpbn" method="POST">
+                    <div class="input">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </div>
+                    <div class="input">
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user_mail" />
+                    </div>
+                    <div class="input">
+                        <label for="msg">Message:</label>
+                        <input id="msg" name="user_message"></input>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit">Send!</button>
+                    </div>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/dist/contact.html" />
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New submission from website"
+                    />
+                    <!-- <input type="hidden" name="_cc" value="another-email@email.com" /> -->
+                </form>
+               <!-- <span class="text-secondary"> Email: </span> -->
            </div>
             <div class="container">
-               <span class="text-secondary"> Phone: </span>
-               918 - 289 - 1171 
+               <!-- <span class="text-secondary"> Phone: </span> -->
+               <!-- 918 - 289 - 1171  -->
            </div>
-            <div class="container">
-                    <span class="text-secondary"> Social: </span>
+            <div class="container social-container">
+                    <!-- <span class="text-secondary"> Social: </span> -->
                     <a href="https://twitter.com/willcphipps">
                         <i class="cont-social fa fa-twitter fa-1x" aria-hidden="true"></i>
                     </a>

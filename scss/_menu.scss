@@ -53,13 +53,13 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: center;
     float: left;
     width: 50%;
     height: 100vh;
     overflow: hidden;
   }
   &-nav {
+    justify-content: center;
     margin: 0;
     padding: 0;
     background: darken($primary-color, 5);
@@ -75,6 +75,8 @@
   }
   // branding side 
   &-branding{ 
+    justify-content: end;
+
     background: $primary-color;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
@@ -83,11 +85,14 @@
       transform: translate3d(0,0,0)
     }
 
-    .portrait {
-      width: 450px;
-      // height: 450px;
+   .portrait {
+      width: 400px;
+      height: 200px;
       background: url('../img/watermark.png');
-      // border-radius: 50%;
+      transition: all 2s ease-in;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       // border: solid 3px $secondary-color;
     }
   }
